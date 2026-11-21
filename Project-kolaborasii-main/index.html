@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Kampanye sederhana untuk mengajak kita menghemat energi setiap hari.">
+	<title>Hemat Energi</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="site-header" id="beranda">
+		<nav class="navbar container" aria-label="Navigasi utama">
+			<a class="brand" href="#beranda" aria-label="Hemat Energi - beranda"><span class="brand-mark" aria-hidden="true">&#128161;</span><span>Hemat <b>Energi</b></span></a>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span><span class="sr-only">Buka menu</span></button>
+			<div class="nav-menu" id="main-menu"><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#hasil-survei">Data survei</a><a href="#aksi">Aksi kita</a></div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero container" aria-labelledby="hero-title">
+			<div class="hero-copy"><p class="eyebrow">Gerakan hemat energi</p><h1 id="hero-title">Hemat energi,<br><em>selamatkan bumi.</em></h1><p class="hero-text">Mulai dari kebiasaan kecil di rumah. Matikan lampu saat tidak digunakan dan gunakan energi seperlunya.</p><a class="button button-primary" href="#aksi">Mulai dari sekarang <span aria-hidden="true">&#8594;</span></a></div>
+			<div class="hero-visual" aria-label="Ilustrasi lampu hemat energi"><div class="light-rays" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><div class="bulb"><div class="bulb-glass"><span class="bulb-filament"></span></div><div class="bulb-base"><span></span><span></span><span></span></div></div><p class="visual-note">Satu lampu<br><strong>satu perubahan</strong></p></div>
+		</section> 
+
+		<section class="simple-info container" id="tentang"><p class="eyebrow">Tentang gerakan ini</p><p>Hemat Energi mengajak kita memakai listrik dengan bijak demi lingkungan yang lebih sehat dan masa depan yang lebih baik.</p></section>
+		<section class="survey-section container" id="hasil-survei" aria-labelledby="survey-title">
+			<div class="survey-heading"><div><p class="eyebrow">Data kuesioner siswa kelas XI</p><h2 id="survey-title">Perilaku hemat energi</h2></div><p class="survey-summary">hasil kuesioner perilaku hemat energi.</p></div>
+			<div class="survey-content">
+				<div class="survey-chart-wrap"><canvas id="survey-chart" role="img" aria-label="Diagram pie kategori perilaku hemat energi siswa"></canvas></div>
+				<div class="survey-details"><p class="survey-total"><strong id="respondent-count"></strong><span>responden</span></p><div class="survey-legend" id="survey-legend" aria-label="Rincian kategori hasil survei"></div><p class="survey-average">Rata-rata skor <strong id="average-score"></strong><span> dari 4</span></p></div>
+			</div>
+		</section>
+		<section class="items-section container" id="per-pernyataan" aria-labelledby="items-title">
+			<div class="survey-heading"><div><p class="eyebrow">Rincian 10 pernyataan</p><h2 id="items-title">Kebiasaan mana yang<br><em>paling kuat?</em></h2></div><p class="survey-summary">Sebaran jawaban tiap pernyataan, skala 1 (jarang) sampai 4 (selalu). Arahkan kursor ke batang untuk melihat detail.</p></div>
+			<div class="score-legend" id="score-legend" aria-label="Keterangan warna skor"></div>
+			<div class="item-rows" id="item-rows"></div>
+		</section>
+		<section class="majors-section container" id="per-jurusan" aria-labelledby="majors-title">
+			<div class="survey-heading"><div><p class="eyebrow">Perbandingan jurusan</p><h2 id="majors-title">Siapa yang paling<br><em>hemat energi?</em></h2></div><p class="survey-summary">Komposisi kategori tiap jurusan, diurutkan dari rata-rata skor tertinggi.</p></div>
+			<div class="major-rows" id="major-rows"></div>
+		</section>
+		<section class="findings-section container" id="rekomendasi" aria-labelledby="findings-title">
+			<div class="survey-heading"><div><p class="eyebrow">Dari temuan data</p><h2 id="findings-title">Dua kebiasaan yang<br><em>perlu dibenahi.</em></h2></div><p class="survey-summary">Rekomendasi berikut berpijak langsung pada dua pernyataan dengan skor terendah di angket.</p></div>
+			<div class="finding-list" id="finding-list"></div>
+		</section>
+		<section class="action-section container" id="aksi"><div><p class="eyebrow">Aksi kita</p><h2>Mulai dari hal<br><em>yang sederhana.</em></h2></div><div class="action-list"><p><span>01</span> Matikan lampu saat meninggalkan ruangan.</p><p><span>02</span> Cabut charger setelah selesai digunakan.</p><p><span>03</span> Manfaatkan cahaya matahari di siang hari.</p></div></section>
+	</main>
+
+	<footer class="site-footer"><div class="container footer-main"><div><a class="brand" href="#beranda"><span class="brand-mark" aria-hidden="true">&#128161;</span><span>Hemat <b>Energi</b></span></a><p>Langkah kecil untuk bumi yang lebih baik.</p></div><a class="back-top" href="#beranda" aria-label="Kembali ke atas">&#8593;</a></div><div class="container footer-bottom"><span>&copy; 2026 Hemat Energi</span><span>Gunakan energi dengan bijak.</span></div></footer>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
+
